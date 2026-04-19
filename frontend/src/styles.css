@@ -895,3 +895,19 @@ button { cursor: pointer; }
   .toolbar select { max-width: 100%; }
   .stats-grid, .application-form { grid-template-columns: 1fr; }
 }
+
+.topbar__greeting {
+  margin: 0 0 4px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.topbar__subtitle {
+  margin: 6px 0 0;
+  color: var(--slate);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}

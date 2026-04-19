@@ -39,7 +39,6 @@ export default function DashboardPage() {
   return (
     <AppShell
       title="Internship Tracker"
-      subtitle="Track your progress and move into the applications workspace when you need the full list."
       action={
         <Link className="nav-item" to="/applications">
           Add Application
