@@ -41,6 +41,10 @@ export default function DashboardPage() {
       title="Internship Tracker"
       action={
         <Link className="nav-item" to="/applications">
+          <svg className="nav-icon" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.6"/>
+            <path d="M10 7v6M7 10h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+          </svg>
           Add Application
         </Link>
       }
