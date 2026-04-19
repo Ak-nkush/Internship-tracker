@@ -63,16 +63,6 @@ export default function AppShell({ title, subtitle, action, children }) {
             Logout
           </button>
         </nav>
-
-        <div className="sidebar-footer">
-          <div className="sidebar-user">
-            <div className="sidebar-user__avatar">{user?.name?.[0]?.toUpperCase() || "U"}</div>
-            <div className="sidebar-user__info">
-              <strong>{user?.name || "Student"}</strong>
-              <span>{user?.email || ""}</span>
-            </div>
-          </div>
-        </div>
       </aside>
 
       <main className="dashboard-main">
@@ -83,8 +73,9 @@ export default function AppShell({ title, subtitle, action, children }) {
             {subtitle && <p className="topbar__subtitle">{subtitle}</p>}
           </div>
           <div className="topbar__profile">
-            <div className="profile-chip">
+            <div className="profile-chip" data-email={user?.email || ""}>
               <span>{user?.name?.[0]?.toUpperCase() || "U"}</span>
+              <div className="profile-tooltip">{user?.email || ""}</div>
             </div>
           </div>
         </header>

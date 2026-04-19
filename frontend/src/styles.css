@@ -1028,3 +1028,59 @@ button { cursor: pointer; }
 .topbar h1 {
   margin-bottom: 0;
 }
+
+/* ── Profile chip tooltip ── */
+.profile-chip {
+  position: relative;
+  cursor: default;
+}
+
+.profile-tooltip {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: #0f1d38;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 10px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.18s, transform 0.18s;
+  box-shadow: 0 8px 24px rgba(10,30,80,0.25);
+  z-index: 50;
+}
+
+.profile-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  right: 16px;
+  border: 6px solid transparent;
+  border-bottom-color: #0f1d38;
+}
+
+.profile-chip:hover .profile-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Remove sidebar footer ── */
+.sidebar-footer,
+.sidebar-user,
+.sidebar-user__avatar,
+.sidebar-user__info { display: none; }
+
+/* ── Tooltip blue restyle ── */
+.profile-tooltip {
+  background: linear-gradient(135deg, #1a4db8, #0f3490) !important;
+  box-shadow: 0 8px 24px rgba(20, 60, 160, 0.35) !important;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.profile-tooltip::before {
+  border-bottom-color: #1a4db8 !important;
+}
